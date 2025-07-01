@@ -69,7 +69,7 @@ const {
 } = require('megajs')
 const path = require('path')
 const msgRetryCounterCache = new NodeCache()
-const ownerNumber = '94761344523'
+const ownerNumber = '94728132970'
 
 
 
@@ -77,7 +77,7 @@ const ownerNumber = '94761344523'
 //===================SESSION============================
 if (!fs.existsSync(__dirname + '/lib/creds.json')) {
     if (config.SESSION_ID) {
-      const sessdata = config.SESSION_ID.replace("SAHAS-MD=", "")
+      const sessdata = config.SESSION_ID.replace("CASPER-MD=", "")
       const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
       filer.download((err, data) => {
         if (err) throw err
@@ -137,13 +137,13 @@ const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream
                     require("./plugins/" + plugin);
                 }
             });
-            console.log('Plugins installed ✅')
-            console.log('Bot connected ✅')
+            console.log('Caper-MD Plugins installed ✅')
+            console.log('Casper-md Bot connected to wahtsapp✅')
 
-      let up = `*DINUWH-FREE MD successfully connected* ✓\n\n> ◦ *Owner Contac infomation* - \nwa.me//+94728899640?text=F-MD\nOR,\nwa.me//+94761344523?text=F-MD
-> ◦ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ: \n\n*  https://whatsapp.com/channel/0029Vb5XXIfDp2Q3A5zeZb1d
-\n* *👨‍💻∂ιηυωн-ƒяєє ѕт м∂ 👨‍💻\nᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ*\n*ᴄʀᴇᴀᴛᴇᴅ ʙʏ • 𝙳𝙲𝙼 ∂ιηυωн-χ  & 𝚃𝙳𝙳 ѕαнαѕ тє¢н*\n* *𝚃𝙷𝙰𝙽𝙺 𝚈𝙾𝚄 🌝🩷*\n\nPREFIX: ${prefix}`;
-      conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://i.ibb.co/tpJYnjV6/DiNuWhMd.jpg` }, caption: up });
+      let up = `*Casper- MD successfully connected* ✓\n\n> ◦ *Owner Contac infomation* - \nwa.me//+94728132970?text=CASPER-MD\nOR,\nwa.me//+94765684096?text=CASPER-MD
+> ◦ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ: \n\n*  https://whatsapp.com/channel/0029Vb6Vpuo2v1IqThY6aU0y
+\n* *👨‍💻𝙘𝙖𝙨𝙥𝙚𝙧-𝙢𝙙 👨‍💻\nᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ*\n*ᴄʀᴇᴀᴛᴇᴅ ʙʏ • 𝘿𝘾𝙈 𝙑𝙄𝙎𝙃𝙒𝘼 𝙆𝙊𝘿𝙄𝙏𝙃𝙐𝙒𝘼𝙆𝙆𝙐*\n* *𝚃𝙷𝙰𝙽𝙺 𝚈𝙾𝚄 🌝🩷*\n\nPREFIX: ${prefix}`;
+      conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://files.catbox.moe/zzez8c.jpg` }, caption: up });
     }
   });
 
@@ -223,13 +223,13 @@ await conn.sendMessage(user, { text: text }, { quoted: mek })
 
 const metadata = await conn.newsletterMetadata("jid", "120363287634683059@newsletter")	      
 if (metadata.viewer_metadata === null){
-await conn.newsletterFollow("120363287634683059@newsletter")
-console.log("CYBER VENOM CHANNEL FOLLOW ✅")
+await conn.newsletterFollow("120363417168743361@newsletter")
+console.log("CASPER-MD CHANNEL FOLLOW✅")
 }	 
 
 
 const id = mek.key.server_id
-await conn.newsletterReactMessage("120363287634683059@newsletter", id, "❤️")
+await conn.newsletterReactMessage("120363417168743361@newsletter", id, "❤️")
 
 	      
 const body = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text :(type == 'interactiveResponseMessage' ) ? mek.message.interactiveResponseMessage  && mek.message.interactiveResponseMessage.nativeFlowResponseMessage && JSON.parse(mek.message.interactiveResponseMessage.nativeFlowResponseMessage.paramsJson) && JSON.parse(mek.message.interactiveResponseMessage.nativeFlowResponseMessage.paramsJson).id :(type == 'templateButtonReplyMessage' )? mek.message.templateButtonReplyMessage && mek.message.templateButtonReplyMessage.selectedId  : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : ''
@@ -326,11 +326,11 @@ contextInfo: {
     forwardingScore: 1,
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363287634683059@newsletter',
+      newsletterJid: '120363417168743361@newsletter',
       serverMessageId: 127
     },
 externalAdReply: { 
-title: 'CYBER-VENOM-SONG-DL',
+title: 'CASPER-MD BOT',
 body: 'ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ',
 mediaType: 1,
 sourceUrl: "https://whatsapp.com/channel/0029Vac3pnlBlHpXLrUBym3a" ,
@@ -681,9 +681,9 @@ events.commands.map(async (command) => {
 }
 
 app.get("/", (req, res) => {
-res.send("📟CYBER-VENOM-SONG-DL Working successfully!");
+res.send("📟CASPER-MD Working successfully!");
 });
-app.listen(port, () => console.log(`CYBER-VENOM-SONG-DL Server listening on port http://localhost:${port}`));
+app.listen(port, () => console.log(`CASPER-MD Server listening on port http://localhost:${port}`));
 
 setTimeout(() => {
 connectToWA()
