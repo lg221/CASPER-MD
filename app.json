@@ -1,0 +1,28 @@
+{
+  "name": "SAHAS-MD",
+  "description": "SAHAS-MD has been designed to make things easier and fun while using WhatsApp. 👨‍💻❤️",
+  "logo": "https://files.catbox.moe/siaqr5.jpg",
+  "keywords": ["sahasmd", "bot", "whatsapp bot", "multi device", "sahas-md"],
+  "success_url": "/",
+  
+  "env": {
+    "SESSION_ID": {
+      "description": "Type the Session-ID you got from scanning QR",
+      "required": true,
+      "value": ""
+    },
+    "session_ID": {
+      "description": "Owner number with country code",
+      "required": false,
+      "value": ""
+    }
+  },
+  
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
+  
+  "stack": "heroku-24"
+}
