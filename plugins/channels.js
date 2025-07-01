@@ -1,4 +1,4 @@
-const config = require("../swttinhs");
+const config = require("../settings");
 const { cmd } = require('../lib/command');
 const yts = require("yt-search");
 const ddownr = require("denethdev-ytmp3");
