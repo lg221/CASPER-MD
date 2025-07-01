@@ -1,9 +1,9 @@
-const { cmd, commands } = require('../command');
+const { cmd, commands } = require('../lib/command');
 const yts = require('yt-search');
 const ddownr = require('denethdev-ytmp3'); // Importing the denethdev-ytmp3 package for downloading
 const f = "`"
 const bold = "*"
-const config = require('../config')
+const config = require('../settings')
 
 
 cmd({
