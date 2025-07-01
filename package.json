@@ -44,6 +44,7 @@
         "api-dylux": "latest",
         "readline": "latest",
         "child_process": "latest",
-        "@vreden/youtube_scraper":"1.2.7"
+        "@vreden/youtube_scraper":"1.2.7",
+        "node-cache": "latest"
     }
 }
