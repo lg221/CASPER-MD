@@ -1,5 +1,5 @@
-const config = require("../config");
-const { cmd } = require('../command');
+const config = require("../swttinhs");
+const { cmd } = require('../lib/command');
 const yts = require("yt-search");
 const ddownr = require("denethdev-ytmp3");
 
