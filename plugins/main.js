@@ -1,14 +1,14 @@
-const { cmd, commands } = require('../command');
-const config = require('../config');
+const { cmd, commands } = require('../lib/command');
+const config = require('../settings');
 const {readEnv} = require('../lib/database');
 const os = require('os');
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, fetchJson, runtime, sleep } = require('../lib/functions');
-const imgUrl = 'https://files.catbox.moe/zzez8c.jpg'; // This image URL seems unnecessary
+const imgUrl = 'https://files.catbox.moe/h8nrl8.jpg'; // This image URL seems unnecessary
 
 //-----------------------------------------------ALive-----------------------------------------------
 
 cmd({
-    pattern: "alive",
+    pattern: "menu",
     desc: "Check bot online or not.",
     category: "general",
     react: "🪄",
@@ -45,8 +45,13 @@ _*𝐂𝐀𝐒𝐏𝐄𝐑-𝐌𝐃 𝐌𝐈𝐍𝐈 𝐖𝐇𝐀𝐓𝐒𝐀�
  🪄☏.Jid (ɢᴇᴛ ᴘᴇʀꜱᴏɴ,ᴄʜᴀɴɴᴇʟ,ᴏʀ ɢʀᴏᴜᴘ ᴊɪᴅ)
  🪄☏.Vcf (ɢᴇᴛ ɢʀᴏᴜᴘ ᴀʟʟ ᴄᴏɴᴛᴀᴄᴛꜱ)
  🪄☏.Fancy (ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀɴʏ ᴛᴇxᴛ ꜱᴛʏʟᴇꜱ)
+ 🪄☏.Setfulldp (ᴄʜᴀɴɢᴇ ꜰᴜʟʟ ᴘʜᴏᴛᴏ ᴘʀᴏꜰɪʟᴇ ᴘɪᴄᴛᴜʀᴇ)
  🪄☏.Owner (ᴄᴏɴᴛᴀᴄᴛ ᴄᴀꜱᴘᴇʀ-ᴍᴅ ᴏᴡɴᴇʀ)
 
+𝗢𝗧𝗛𝗘𝗥 𝗙𝗘𝗔𝗧𝗨𝗥𝗘𝗦✘💫🪄
+🪄ꜱᴛᴀᴛᴜꜱ ᴊᴜꜱᴛɴᴏᴡ ꜱᴇᴇɴ
+🪄ꜱᴛᴀᴛᴜꜱ ᴀᴜᴛᴏ ʟɪᴋᴇ
+🪄ᴀᴜᴛᴏ ꜱᴀᴛᴜꜱ ꜱᴀᴠᴇ
 
 *☘️ Follow our channel:* https://whatsapp.com/channel/0029VbAyqatKLaHuFEEx1T3x
 
