@@ -1,7 +1,7 @@
 const config = require("../settings");
 const { cmd } = require('../lib/command');
 const yts = require("yt-search");
-const ddownr = require("denethdev-ytmp3");
+const axios = require("axios");
 
 async function handleSongDownload(m, q, msg, reply, jid) {
   try {
@@ -14,20 +14,28 @@ async function handleSongDownload(m, q, msg, reply, jid) {
 
     const video = search.videos[0];
     const url = video.url;
-    const result = await ddownr.download(url, "mp3");
+       const apiUrl = `https://kaliyax-api.vercel.app/api/ytmp3?url=${encodeURIComponent(url)}`;
 
-    const caption = `*☘️𝐓𝐢𝐭𝐥𝐞* - ${video.title}\n\n` +
-                    `▫️ *Ｄᴜʀᴀᴛɪᴏɴ* - ${video.timestamp}\n` +
-                    `▫️ *Ｕᴘʟᴏᴀᴅᴇʀ* - ${video.author.name}\n` +
-                    `▫️ *Ｖɪᴇᴡꜱ* - ${video.views}\n\n\n${config.FOOTER}`;
+    const { data } = await axios.get(apiUrl);
+
+    if (!data.data.download.status) return reply("KaLiYaX Api Down ❌");
+
+    const { title, thumbnail, timestamp, views} = data.data.metadata;
+const author = data.data.metadata.author.name
+const dlurl = data.data.download.url
+
+    const caption = `*☘️𝐓𝐢𝐭𝐥𝐞* - ${title}\n\n` +
+                    `▫️ *Ｄᴜʀᴀᴛɪᴏɴ* - ${timestamp}\n` +
+                    `▫️ *Ｕᴘʟᴏᴀᴅᴇʀ* - ${author}\n` +
+                    `▫️ *Ｖɪᴇᴡꜱ* - ${views}\n\n\n${config.FOOTER}`;
 
     await m.sendMessage(jid, {
-      image: { url: video.thumbnail },
+      image: { url: thumbnail },
       caption
     }, { quoted: msg });
 
     await m.sendMessage(jid, {
-      audio: { url: result.downloadUrl },
+      audio: { url: dlurl },
       mimetype: "audio/mpeg",
       ptt: true
     }, { quoted: msg });
