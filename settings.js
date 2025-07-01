@@ -10,7 +10,7 @@ POSTGRESQL_URL: process.env.POSTGRESQL_URL || 'postgres://izumimd_meje_user:0Vhm
 OWNER_NUMBER: process.env.OWNER_NUMBER || '94764582504', 
 PREFIX:  process.env.PREFIX || ['.'] ,
 JID: process.env.JID || "120363389486431984@newsletter",
-FOOTER: 'ලස්සන සිංදු✨☘️',
+FOOTER: '> ලස්සන සිංදු✨☘️ (𝕝𝕒𝕤𝕤𝕒𝕟𝕒 𝕤𝕚𝕟𝕕𝕦🪄)',
 LOGO: process.env.LOGO || `https://i.ibb.co/RMxmMc5/4568.jpg`,
 OWNER_REACT: process.env.OWNER_REACT || 'true',
 AUTO_STATUS_READ: process.env.AUTO_STATUS_READ || "true",
