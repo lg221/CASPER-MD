@@ -36,7 +36,6 @@
         "seedr": "latest",
         "mongoose":"latest",
         "@dark-yasiya/yt-dl.js": "latest",
-        "node-cache": "latest",
         "yt-search": "latest",
         "systeminformation":"^5.21.11",
         "human-readable": "latest",  
