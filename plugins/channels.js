@@ -17,9 +17,9 @@ async function handleSongDownload(m, q, msg, reply, jid) {
     const result = await ddownr.download(url, "mp3");
 
     const caption = `*☘️𝐓𝐢𝐭𝐥𝐞* - ${video.title}\n\n` +
-                    `▫️ Ｄᴜʀᴀᴛɪᴏɴ - ${video.timestamp}\n` +
-                    `▫️ Ｕᴘʟᴏᴀᴅᴇʀ - ${video.author.name}\n` +
-                    `▫️ Ｖɪᴇᴡꜱ - ${video.views}\n\n\n${config.FOOTER}`;
+                    `▫️ *Ｄᴜʀᴀᴛɪᴏɴ* - ${video.timestamp}\n` +
+                    `▫️ *Ｕᴘʟᴏᴀᴅᴇʀ* - ${video.author.name}\n` +
+                    `▫️ *Ｖɪᴇᴡꜱ* - ${video.views}\n\n\n${config.FOOTER}`;
 
     await m.sendMessage(jid, {
       image: { url: video.thumbnail },
