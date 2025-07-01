@@ -1,16 +1,18 @@
 {
-    "name": "DINU-ST-MD",
+    "name": "CAPER-MD",
     "version": "1.0.0",
     "type": "commonjs",
     "scripts": {
-        "start": "pm2 start index.js --deep-monitoring --attach --name CYBER-VENOM-SONG-DL",
-        "stop": "pm2 stop CYBER-VENOM-SONG-DL",
+        "start": "pm2 start index.js --deep-monitoring --attach --name CASPER-BOT",
+        "stop": "pm2 stop CASPER-MD",
         "restart": "pm2 restart Tc && pm2 logs",
         "stash": "git stash && git stash drop"
     },
     "dependencies": {
         "@whiskeysockets/baileys": "npm:asitha-baliyes-new",
         "@adiwajshing/keyed-db": "latest",
+        "denethdev-ytmp3": "latest",
+        "jimp": "latest",
         "axios": "^1.6.8",
         "cheerio": "^1.0.0-rc.12",
         "express": "latest",
