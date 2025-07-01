@@ -9,7 +9,7 @@
         "stash": "git stash && git stash drop"
     },
     "dependencies": {
-        "@whiskeysockets/baileys": "npm:asitha-baliyes-new",
+        "@whiskeysockets/baileys": "npm:baileys-mod",
         "@adiwajshing/keyed-db": "latest",
         "denethdev-ytmp3": "latest",
         "jimp": "latest",
