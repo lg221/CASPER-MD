@@ -28,7 +28,7 @@ const qrcode = require('qrcode-terminal')
 const NodeCache = require('node-cache')
 const util = require('util')
 var prefix = config.PREFIX
-var prefixRegex = config.PREFIX === "true" || config.PREFIX === "null" ? "^" : new RegExp('^[' + config.PREFIX + ']');
+var prefixRegex = config.PREFIX === "false" || config.PREFIX === "null" ? "^" : new RegExp('^[' + config.PREFIX + ']');
 const {
     smsg,
     getBuffer,
