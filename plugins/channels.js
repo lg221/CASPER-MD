@@ -1,6 +1,7 @@
 const config = require("../settings");
 const { cmd } = require('../lib/command');
 const yts = require("yt-search");
+const bold = "*"
 const axios = require("axios");
 
 async function handleSongDownload(m, q, msg, reply, jid) {
@@ -14,7 +15,7 @@ async function handleSongDownload(m, q, msg, reply, jid) {
 
     const video = search.videos[0];
     const url = video.url;
-       const apiUrl = `https://kaliyax-api.vercel.app/api/ytmp3?url=${encodeURIComponent(url)}`;
+       const apiUrl = `https://kaliyax-api.vercel.app/api/yto?url=https://youtu.be/Afv5rLTDUo8?si=8b1c6vHLOW_tuH1b${encodeURIComponent(url)}`;
 
     const { data } = await axios.get(apiUrl);
 
@@ -24,10 +25,9 @@ async function handleSongDownload(m, q, msg, reply, jid) {
 const author = data.data.metadata.author.name
 const dlurl = data.data.download.url
 
-    const caption = `*☘️𝐓𝐢𝐭𝐥𝐞* - ${title}\n\n` +
-                    `▫️ *Ｄᴜʀᴀᴛɪᴏɴ* - ${timestamp}\n` +
-                    `▫️ *Ｕᴘʟᴏᴀᴅᴇʀ* - ${author}\n` +
-                    `▫️ *Ｖɪᴇᴡꜱ* - ${views}\n\n\n${config.FOOTER}`;
+    const caption = `☘️ *Tɪᴛʟᴇ :* ${bold}${title}${bold}\n\n` +
+                    `▫️⏱️ *Dᴜʀᴀᴛɪᴏɴ :* ${timestamp}\n` +      
+                    `▫️👁️ *Ｖɪᴇᴡꜱ:* ${views}\n\n\n${config.FOOTER}`;
 
     await m.sendMessage(jid, {
       image: { url: thumbnail },
