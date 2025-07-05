@@ -3,7 +3,7 @@ const prefix = config.PREFIX;
 const { cmd } = require('../lib/command');
 
 cmd({
-  pattern: "panel",
+  pattern: "daraz",
   react: "🗣️",
   desc: "Render Paid Promotion Plans",
   category: "main",
@@ -23,7 +23,6 @@ _*𝐂𝐀𝐒𝐏𝐄𝐑-𝐌𝐃 𝐌𝐈𝐍𝐈 𝐖𝐇𝐀𝐓𝐒𝐀�
 > *Runtime:* ${runtime(process.uptime())}
 > *Hostname:* ${hostname}
 ✘𝐂𝐚𝐬𝐩𝐞𝐫 𝐌𝐢𝐧𝐢 𝐰𝐚 𝐁𝐨𝐭 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬✘🤖
-
 `;
 
     await conn.sendMessage(from, {
@@ -32,7 +31,7 @@ _*𝐂𝐀𝐒𝐏𝐄𝐑-𝐌𝐃 𝐌𝐈𝐍𝐈 𝐖𝐇𝐀𝐓𝐒𝐀�
       buttons: [
         { buttonId: prefix + '1reply', buttonText: { displayText: '.PING 💫' }, type: 1 },
         { buttonId: prefix + '2reply', buttonText: { displayText: '.SYSTEM 💫' }, type: 1 },
-        { buttonId: prefix + '3reply', buttonText: { displayText: ' .STATUS 💫' }, type: 1 },
+        { buttonId: prefix + '3reply', buttonText: { displayText: '.STATUS 💫' }, type: 1 },
         { buttonId: prefix + '4reply', buttonText: { displayText: '.OWNER 💫' }, type: 1 },
         { buttonId: prefix + '5reply', buttonText: { displayText: '.ALIVE 💫' }, type: 1 }
       ],
