@@ -15,7 +15,7 @@ async function handleSongDownload(m, q, msg, reply, jid) {
 
     const video = search.videos[0];
     const url = video.url;
-       const apiUrl = `https://kaliyax-api.vercel.app/api/yto?url=${encodeURIComponent(url)}`;
+       const apiUrl = `https://kaliyax-api.vercel.app/api/ytmp3dl?url=https://youtu.be/Afv5rLTDUo8?si=8b1c6vHLOW_tuH1b${encodeURIComponent(url)}`;
 
     const { data } = await axios.get(apiUrl);
 
